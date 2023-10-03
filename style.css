@@ -1,0 +1,195 @@
+.text-white {
+  color: #ffffff;
+  /* White text */
+}
+
+/* Custom CSS to make icons white */
+.icon-white {
+  color: #ffffff;
+  /* White color */
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#main-menu .nav-bar {
+  list-style: none;
+  margin-top: 40px;
+}
+
+#main-menu .nav-bar li {
+  display: inline;
+  padding: 0 10px;
+}
+
+#main-menu .nav-bar li a {
+  text-decoration: none;
+  padding-left: 25px;
+  text-transform: uppercase;
+  color: #333;
+  text-shadow: 1px 1px 1px #ccc;
+}
+
+.nav-bar .nav-button-home a {
+  background: url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/home.gif") no-repeat 0px -2px transparent;
+}
+
+.nav-bar .nav-button-services a {
+  background: url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/services.gif") no-repeat 0px -2px transparent;
+}
+
+.nav-bar .nav-button-products a {
+  background: url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/products.gif") no-repeat 0px -2px transparent;
+}
+
+/* Custom CSS for the transparent border and white text color */
+.about-box {
+  border: 2px solid white;
+  /* Transparent border */
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 20px;
+  /* Adjust padding as needed */
+  margin: 0 auto;
+  /* Center the box horizontally */
+  max-width: 2000px;
+  /* Set a maximum width for the box */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+}
+
+.about-text {
+  color: white;
+  /* White font color for text content */
+}
+
+/* Custom CSS for the transparent footer */
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+}
+
+.footer-content {
+  color: white;
+  padding: 20px;
+  /* Adjust padding as needed */
+}
+
+/*About*/
+
+/*---------------------------------------------------------------------
+                        Mouse cursor
+-----------------------------------------------------------------------*/
+.theBall,
+.theBall-outer {
+  width: 20px;
+  height: 20px;
+}
+
+.theBall-outer {
+  position: fixed;
+  top: -20px;
+  left: -20px;
+  z-index: 9999999999999999999;
+  pointer-events: none !important;
+}
+
+.theBall {
+  position: absolute;
+  background-color: rgba(255, 114, 114, 0.8);
+  border-radius: 50%;
+  -webkit-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -moz-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -ms-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -o-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center center;
+}
+
+.zooming.theBall {
+  background-color: #ff7272;
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+}
+
+/*---------------------------------------------------------------------
+                        Mouse Effect
+-----------------------------------------------------------------------*/
+.mouse-move {
+  position: absolute;
+  bottom: -130px;
+  left: 50%;
+  width: 65px;
+  margin-left: -50px;
+}
+
+.mouse-move a {
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  height: 65px;
+  width: 65px;
+  line-height: 65px;
+  display: inline-block;
+  border-radius: 900px;
+  text-align: center;
+}
+
+.mouse-move .boom::before,
+.mouse-move .boom::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.mouse-move .boom::before,
+.mouse-move .boom::after {
+  content: "";
+  z-index: -1;
+  margin: 0;
+  border-radius: 900px;
+  box-shadow: inset 0 0 0 2px;
+  animation: clipMe 8s linear infinite;
+}
+
+.mouse-move .boom::before {
+  animation-delay: -4s;
+}
+
+@keyframes clipMe {
+
+  0%,
+  100% {
+    clip: rect(0px, 220px, 2px, 0px);
+  }
+
+  25% {
+    clip: rect(0px, 2px, 220px, 0px);
+  }
+
+  50% {
+    clip: rect(218px, 220px, 220px, 0px);
+  }
+
+  75% {
+    clip: rect(0px, 220px, 220px, 218px);
+  }
+}
+
+.banner_canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
