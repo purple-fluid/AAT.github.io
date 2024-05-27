@@ -80,23 +80,21 @@ height: 100vh;
 */
 
 /* Home Box styling */
-
 .home-box {
     display: flex;
     border: 2px solid black;
-    /* Bold border */
     margin: 20px auto;
     width: 80%;
+    max-width: 1000px;
+    /* Increase maximum width for desktop screens */
     height: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Shadow for 3D effect */
 }
 
 .home-section {
     border-right: 2px solid black;
     position: relative;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2);
-    /* Inner and outer shadow */
 }
 
 .home-section:last-child {
@@ -105,7 +103,6 @@ height: 100vh;
 
 .home-gradient-section {
     flex: 0 0 25%;
-    /* 35% of the width */
     background: linear-gradient(45deg, #138808, #ffffff, #ff9933);
     background-size: 200% 200%;
     animation: gradient-animation 5s ease infinite;
@@ -128,7 +125,6 @@ height: 100vh;
 .home-content-section {
     padding: 20px;
     flex: 0 0 calc(65% - 40px);
-    /* 55% of the width */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,7 +132,6 @@ height: 100vh;
 
 .home-vertical-text-section {
     flex: 0 0 10%;
-    /* 10% of the width */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,6 +144,27 @@ height: 100vh;
     font-weight: bold;
     color: black;
 }
+
+@media screen and (max-width: 768px) {
+
+    /* Apply styles only for screens narrower than 768px */
+    .home-box {
+        flex-direction: column;
+        height: auto;
+        /* Change height to auto for dynamic height */
+    }
+
+    .home-content-section {
+        flex: 1;
+        /* Take up remaining space */
+    }
+
+    .home-vertical-text-section {
+        display: none;
+        /* Hide vertical text section on smaller screens */
+    }
+}
+
 
 /* Notes */
 /* Notes Box styling */
