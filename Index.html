@@ -4,126 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhishek A. Tank</title>
-
-    <link rel="shortcut icon" href="../AAT.github.io/Root/Images/Fevicon.png" type="image/x-icon">
-
-    <link rel="stylesheet" href="style.css">
-
-    <script>
-        window.ga = window.ga || function () {
-            (ga.q = ga.q || []).push(arguments)
-        };
-        ga.l = +new Date;
-        ga('create', 'UA-105392568-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-
-    <!--Bootstrap CSS-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!--Font Awesome CSS (for icons) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <title>A.A.T homepage</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./Root/Images/Fevicon.svg" type="image/x-icon">
 </head>
 
 <body>
-
-    <!--
-    #Navbar
-    #About
-    #Contact
-    #Projects
-    #Blogs
--->
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
-        <div class="container">
-
-            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon text-white"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#">About</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link text-white" href="Root/CV/Resume Abhishek A. Tank.pdf">Resume<span
-                                class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="notes.html" class="nav-link">Notes</a></li>
+            <li class="nav-item"><a href="./Root/CV/Resume_A_A_Tank.pdf" class="nav-link">Resume</a></li>
+        </ul>
     </nav>
 
+    <div class="home-box">
+        <div class="home-section home-gradient-section"></div>
+        <div class="home-section home-content-section">
+            <div>
+                <p><b>Hey there!</b> Welcome to my little cyber hub! 🌐🙏 I'm <b>thrilled</b> you landed here! Whether
+                    you clicked out of curiosity or came hunting for something cool, I'm <b>pumped</b> to have you.</p>
 
+                <p>This site is my digital playground - where I spill my thoughts, share my passions, and let you into
+                    what makes me, well, <span>me</span>. Dive right in! From my latest projects to whatever randomness
+                    has caught my eye lately, it's all here.</p>
 
-    <div class="theBall-outer">
-        <div class="theBall"></div>
-    </div>
-    <div id="page" class="site">
-        <canvas class="banner_canvas" id="canvas_banner"></canvas>
+                <p>Your visit means the world to me, and I'm beyond grateful to share a slice of my world with you.</p>
 
-        <div class="top-title wow fadeInUp" onmousemove="color_hover(event)">
-            <div class="row">
-                <!-- about -->
-                <div class="container mt-5">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <div class="about-box">
-                                <h2 class="about-text">About Me</h2>
-                                <p class="about-text">Hello, I'm Abhishek, a passionate software engineer and computer enthusiast. I
-                                    thrive on solving digital puzzles using programming languages like C++, C#,
-                                    JavaScript, and Golang, while also being well-versed in .NET, Node.js and Gin.
-                                    Beyond code, I'm a creative soul who enjoys writing, watching movies, singing, and
-                                    acting. Mathematics, physics and economy hold a special fascination for me. In
-                                    addition to my programming skills, I have a deep understanding of database
-                                    management, including SQL for structured data and NoSQL for flexible, unstructured
-                                    data. I'm also proficient in tools like GitHub and ChatGPT, which help me streamline
-                                    my work and collaborate effectively. Welcome to my digital space, where I share my
-                                    experiences, insights, and the exciting journey of a software engineer with you.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--  -->
+                <p>Thanks for swinging by, and I hope you find something here that <b>resonates</b> with you.</p>
             </div>
         </div>
-    </div>
-    </div>
-
-    <!-- Footer Section -->
-    <footer class="fixed-bottom">
-        <div class="footer-content">
-            <div class="container">
-                <div class="row">
-
-                    <div class="col-md-12 text-center">
-                        <h5>Connect Me</h5>
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="https://www.linkedin.com/in/abhishek-tank-1450a126b/"><i
-                                        class="fab fa-linkedin icon-white"></i> LinkedIn</a>
-                                | <a href="https://github.com/purple-fluid"><i class="fab fa-github icon-white"></i>
-                                    GitHub</a>
-                                | Email: AbhishekTankAtom@Gmail.com
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="home-section home-vertical-text-section">
+            <p class="home-vertical-text">Welcome!</p>
         </div>
+    </div>
+
+    <footer class="footer">
+        <ul class="footer-list">
+            <li class="footer-item"><a href="https://github.com/purple-fluid" class="footer-link"><img
+                        src="https://img.icons8.com/?size=100&id=Mhl1TfJLdkh5&format=png&color=000000" alt="Github Icon"
+                        class="footer-icon"> Github</a></li>
+            <li class="footer-item"><a href="https://www.codewars.com/users/A.A.T." class="footer-link"><img
+                        src="https://img.icons8.com/?size=100&id=gDJDJJ1MCGmG&format=png&color=000000"
+                        alt="Codewars Icon" class="footer-icon"> Codewars</a></li>
+        </ul>
     </footer>
-
-    <script src="Index.js"></script>
-
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
-
 </body>
 
 </html>

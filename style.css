@@ -1,195 +1,311 @@
-.text-white {
-  color: #ffffff;
-  /* White text */
-}
-
-/* Custom CSS to make icons white */
-.icon-white {
-  color: #ffffff;
-  /* White color */
+/* Reset some basic styles */
+body,
+ul {
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: sans-serif;
+    font-family: 'Courier New', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#main-menu .nav-bar {
-  list-style: none;
-  margin-top: 40px;
+/* Common styling for navbar and footer */
+.navbar,
+.footer {
+    width: 80%;
+    margin: 20px auto;
+    /* Consistent margin */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Transparent background */
+    border: 2px solid black;
+    /* Solid black border */
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Shadow for 3D effect */
+    display: flex;
+    justify-content: center;
 }
 
-#main-menu .nav-bar li {
-  display: inline;
-  padding: 0 10px;
+/* Navbar specific styling */
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
 }
 
-#main-menu .nav-bar li a {
-  text-decoration: none;
-  padding-left: 25px;
-  text-transform: uppercase;
-  color: #333;
-  text-shadow: 1px 1px 1px #ccc;
+.nav-item {
+    margin: 0 1rem;
 }
 
-.nav-bar .nav-button-home a {
-  background: url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/home.gif") no-repeat 0px -2px transparent;
+.nav-link {
+    color: black;
+    /* Text color */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /* Initial shadow */
 }
 
-.nav-bar .nav-button-services a {
-  background: url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/services.gif") no-repeat 0px -2px transparent;
+.nav-link:hover {
+    color: #000080;
+    /* Hover color */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    /* Enhanced shadow on hover */
 }
 
-.nav-bar .nav-button-products a {
-  background: url("https://www.cheesetoast.co.uk/cheesepress/wp-content/uploads/2012/08/products.gif") no-repeat 0px -2px transparent;
+/* Scroller */
+/* #scroll-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    margin-top: 50px;
+    /* Adjust according to navbar height 
+height: 100vh;
 }
 
-/* Custom CSS for the transparent border and white text color */
-.about-box {
-  border: 2px solid white;
-  /* Transparent border */
-  border-radius: 10px;
-  /* Rounded corners */
-  padding: 20px;
-  /* Adjust padding as needed */
-  margin: 0 auto;
-  /* Center the box horizontally */
-  max-width: 2000px;
-  /* Set a maximum width for the box */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 20%);
+.scroll-section {
+    min-width: 100vw;
+    height: calc(100vh - 50px);
+    /* Adjust according to navbar height 
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+*/
+
+/* Home Box styling */
+
+.home-box {
+    display: flex;
+    border: 2px solid black;
+    /* Bold border */
+    margin: 20px auto;
+    width: 80%;
+    height: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Shadow for 3D effect */
 }
 
-.about-text {
-  color: white;
-  /* White font color for text content */
+.home-section {
+    border-right: 2px solid black;
+    position: relative;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Inner and outer shadow */
 }
 
-/* Custom CSS for the transparent footer */
-.fixed-bottom {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: transparent;
+.home-section:last-child {
+    border-right: none;
 }
 
-.footer-content {
-  color: white;
-  padding: 20px;
-  /* Adjust padding as needed */
+.home-gradient-section {
+    flex: 0 0 25%;
+    /* 35% of the width */
+    background: linear-gradient(45deg, #138808, #ffffff, #ff9933);
+    background-size: 200% 200%;
+    animation: gradient-animation 5s ease infinite;
 }
 
-/*About*/
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
 
-/*---------------------------------------------------------------------
-                        Mouse cursor
------------------------------------------------------------------------*/
-.theBall,
-.theBall-outer {
-  width: 20px;
-  height: 20px;
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-.theBall-outer {
-  position: fixed;
-  top: -20px;
-  left: -20px;
-  z-index: 9999999999999999999;
-  pointer-events: none !important;
+.home-content-section {
+    padding: 20px;
+    flex: 0 0 calc(65% - 40px);
+    /* 55% of the width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.theBall {
-  position: absolute;
-  background-color: rgba(255, 114, 114, 0.8);
-  border-radius: 50%;
-  -webkit-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -moz-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -ms-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  -o-transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform-origin: center center;
+.home-vertical-text-section {
+    flex: 0 0 10%;
+    /* 10% of the width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.zooming.theBall {
-  background-color: #ff7272;
-  -webkit-transform: scale(2);
-  -moz-transform: scale(2);
-  -ms-transform: scale(2);
-  -o-transform: scale(2);
-  transform: scale(2);
+.home-vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
 }
 
-/*---------------------------------------------------------------------
-                        Mouse Effect
------------------------------------------------------------------------*/
-.mouse-move {
-  position: absolute;
-  bottom: -130px;
-  left: 50%;
-  width: 65px;
-  margin-left: -50px;
+
+/* Notes */
+/* Notes Box styling */
+.notes-box {
+    display: flex;
+    flex-direction: column-reverse;
+    /* To reverse the order */
+    border: 2px solid black;
+    margin: 20px auto;
+    width: 80%;
+    height: auto;
+    /* Adjust height as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #00e2c0, #312d73, #9500f8);
+    background-size: 200% 200%;
+    animation: gradient-animation 5s ease infinite;
+    padding: 10px;
+    /* Add padding to see the gradient */
 }
 
-.mouse-move a {
-  letter-spacing: 2px;
-  font-size: 12px;
-  text-transform: uppercase;
-  height: 65px;
-  width: 65px;
-  line-height: 65px;
-  display: inline-block;
-  border-radius: 900px;
-  text-align: center;
+/* Notes Section styling */
+.notes-section {
+    border-bottom: 2px solid black;
+    /* Changed to bottom border */
+    box-shadow: inset 0 0 10px rgba(35, 14, 139, 0.45), 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    /* Add margin to create space between sections */
 }
 
-.mouse-move .boom::before,
-.mouse-move .boom::after {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.notes-section:last-child {
+    border-bottom: none;
+    /* Removed bottom border from the last section */
 }
 
-.mouse-move .boom::before,
-.mouse-move .boom::after {
-  content: "";
-  z-index: -1;
-  margin: 0;
-  border-radius: 900px;
-  box-shadow: inset 0 0 0 2px;
-  animation: clipMe 8s linear infinite;
+/* Content Section styling */
+.notes-content-section {
+    padding: 20px;
+    background-color: #ffffff;
+    /* Set to opaque white */
 }
 
-.mouse-move .boom::before {
-  animation-delay: -4s;
+/* Table Section styling */
+.notes-table-section {
+    padding: 20px;
+    overflow-x: auto;
+    /* Enable horizontal scrolling if needed */
+    background-color: #ffffff;
+    /* Set to opaque white */
 }
 
-@keyframes clipMe {
-
-  0%,
-  100% {
-    clip: rect(0px, 220px, 2px, 0px);
-  }
-
-  25% {
-    clip: rect(0px, 2px, 220px, 0px);
-  }
-
-  50% {
-    clip: rect(218px, 220px, 220px, 0px);
-  }
-
-  75% {
-    clip: rect(0px, 220px, 220px, 218px);
-  }
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.banner_canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Programming */
+/* Programming Box styling */
+.programming-box {
+    border: 2px solid black;
+    margin: 20px auto;
+    width: 80%;
+    height: auto;
+    /* Adjust height as needed */
+    overflow: hidden;
+    /* Hide overflowing content */
+    position: relative;
+    /* Positioning for absolute elements */
+    background: linear-gradient(109.6deg, #0f0202 11.2%, #24a3be 91.1%);
+    background-size: 200%, 200%;
+    animation: gradient-animation 5s ease infinite;
+}
+
+/* Programming Slideshow styling */
+.programming-slideshow {
+    display: flex;
+    width: 100%;
+    /* Ensure the slideshow fills the box */
+    transition: transform 0.5s ease;
+    /* Smooth transition effect */
+}
+
+/* Programming Slide styling */
+.programming-slide {
+    flex: 0 0 100%;
+    /* Each slide occupies full width */
+    padding: 20px;
+    /* Add padding for content */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+    text-align: center;
+    /* Center-align content */
+    color: white;
+    /* Text color */
+}
+
+/* Responsive slide width for smaller screens */
+@media (max-width: 768px) {
+    .programming-slide {
+        flex: 0 0 100%;
+        /* Each slide occupies full width */
+    }
+}
+
+
+/* Footer styling */
+.footer-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.footer-item {
+    margin: 0 1rem;
+}
+
+.footer-link {
+    color: black;
+    /* Text color */
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    /* Initial shadow */
+    display: flex;
+    align-items: center;
+}
+
+.footer-link i {
+    margin-right: 8px;
+}
+
+.footer-link:hover {
+    color: #000080;
+    /* Hover color */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    /* Enhanced shadow on hover */
+}
+
+.footer-icon {
+    width: 24px;
+    /* Adjust width as needed */
+    height: 24px;
+    /* Adjust height as needed */
+    margin-right: 8px;
+    /* Add some spacing between icon and text */
 }
